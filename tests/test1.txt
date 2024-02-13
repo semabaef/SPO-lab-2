@@ -1,6 +1,13 @@
-method callCthulhu(q:float,u:int):call
-    var a,b,c:god; d,e:ancient; f:array[] of int;
+method callCthulhu(a:int):callingType
     begin
-        if 666>3 then callCthulhu(1, l[7]);
-        else a:=6+6+6;
+        a:=a+6;
+        if a>10 then a:=a*2;
+        else a:=a*3;
+        while a>10 do
+         begin
+            a:=2+3;
+         end;
+        if a<10 then a:=a*2;
+        else a:=a*3;
+        x:=7;
     end;
