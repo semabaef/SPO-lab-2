@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "operation_tree.h": "c",
+        "abstract_syntax_tree.h": "c",
+        "string.h": "c",
+        "control_flow_graph.h": "c"
+    }
+}

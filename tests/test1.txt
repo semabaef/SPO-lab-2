@@ -1,13 +1,13 @@
 method callCthulhu(a:int):callingType
     begin
-        a:=a+6;
-        if a>10 then a:=a*2;
-        else a:=a*3;
         while a>10 do
          begin
             a:=2+3;
          end;
-        if a<10 then a:=a*2;
+        a:=a+6;
+        if a>10 then a:=a*2;
         else a:=a*3;
-        x:=7;
+        if x<10 then x:=x*2;
+        else x:=x*777;
+        y:=7;
     end;

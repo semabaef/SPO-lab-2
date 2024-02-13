@@ -2,10 +2,11 @@
 #define SYSTEM_SOFTWARE_CONTROL_FLOW_GRAPH_H
 #define MAXIMUM_IDENTIFIER_LENGTH 1024
 
-#include "operation_tree/operation_tree.h"
-#include "abstract_syntax_tree/abstract_syntax_tree.h"
+#include "../operation_tree/operation_tree.h"
+#include "../abstract_syntax_tree/abstract_syntax_tree.h"
 
 enum cfg_node_type {
+    COMMON_CFG,
     LOOP_CFG,
     CONDITION_CFG
 };
