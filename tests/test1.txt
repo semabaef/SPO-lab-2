@@ -1,6 +1,6 @@
-method meow(q:int):gav
-    var a,b,c:abobus; d,e:amogus; f:array[] of int;
+method callCthulhu(q:float,u:int):call
+    var a,b,c:god; d,e:ancient; f:array[] of int;
     begin
-        if 100>50 then sosiska(1, l[7]);
+        if 666>3 then callCthulhu(1, l[7]);
         else a:=6+6+6;
     end;
