@@ -3,8 +3,8 @@
   #include <stdlib.h>
   #include <stdbool.h>
   #include <getopt.h>
-  #include "ast.h"
-  #include "error.h"
+  #include "ast/ast.h"
+  #include "error/error.h"
 
   struct ast_node *root;
 %}

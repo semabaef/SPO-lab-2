@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "grammer.tab.h"
-#include "ast.h"
+#include "ast/ast.h"
 
 extern int yyparse();
 extern FILE *yyin;

@@ -1,6 +1,6 @@
 %{
-#include "error.h"
-#include "ast.h"
+#include "error/error.h"
+#include "ast/ast.h"
 #include "grammer.tab.h"
 #include <string.h>
 %}

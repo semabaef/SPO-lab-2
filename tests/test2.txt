@@ -1,0 +1,5 @@
+method norma(q:int):vg
+    var a:sorokin; 
+    begin
+        a:=6+6+6;
+    end;
