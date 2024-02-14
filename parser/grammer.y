@@ -38,6 +38,7 @@
 %type <node> body_item
 %type <node> source_item
 %type <node> list_var
+%type <node> list_statements
 %type <node> assigment
 %type <node> type_ref
 %type <node> builtin
@@ -51,6 +52,7 @@
 %type <node> if
 %type <node> block
 %type <node> while
+%type <node> we
 %type <node> do
 %type <node> break
 %type <node> expr
@@ -135,6 +137,10 @@ if: IF expr THEN statement                    {$$ = make_branch_node($2, $4, NUL
     | IF expr THEN statement ELSE statement   {$$ = make_branch_node($2, $4, $6)}
     ;
 
+list_statements:              {$$ = NULL}
+    | statement list_statements {$$ = make_loop_node("list_statements", $1, $2)}
+    ;
+
 block: BEGINING END SEMICOLON                {$$ = make_block(NULL)}
     | BEGINING block_item END SEMICOLON      {$$ = make_block($2)}
     ;
@@ -144,12 +150,13 @@ block_item:                   {$$ = NULL}
     ;
 
 while:
-    WHILE expr DO statement   {$$ = make_loop_node("while", $2, $4)}
+    we DO list_statements   {$$ = make_loop_node("while", $1, $3)}
     ;
 
-do: REPEAT statement WHILE expr SEMICOLON    {$$ = make_loop_node("do-while", $2, $4)}
-    | REPEAT statement UNTIL expr SEMICOLON  {$$ = make_loop_node("do-until", $2, $4)}
+do: REPEAT list_statements we SEMICOLON    {$$ = make_loop_node("do-while", $2, $3)}
+    | REPEAT list_statements UNTIL expr SEMICOLON  {$$ = make_loop_node("do-until", $2, $4)}
     ;
+we: WHILE expr { $$ = $2; };
 
 break: BREAK SEMICOLON        {$$ = make_common_node("break", NULL, NULL)}
     ;

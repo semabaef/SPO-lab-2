@@ -60,11 +60,11 @@ result: $(OBJS_WITH_PATH)
 	gcc $(OBJS_WITH_PATH) -o result && chmod +x result
 
 run_ast: result
-	for i in 1 2; do \
+	for i in 1 2 3; do \
             ./result tests/test$$i.txt ast | dot -Tsvg > ${OUTPUT_DIR}/graph_ast_$$i.svg; \
         done
 
 run_cfg: result
-	for i in 1 2; do \
-            ./result tests/test$$i.txt cfg | dot -Tsvg > ${OUTPUT_DIR}/graph_cfg_$$i.svg; \
+	for i in 1 2 3; do \
+        	./result tests/test$$i.txt cfg | dot -Tsvg > ${OUTPUT_DIR}/graph_cfg_$$i.svg; \
         done

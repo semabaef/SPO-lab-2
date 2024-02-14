@@ -1,5 +1,18 @@
-method norma(q:int):vg
-    var a:sorokin; 
+method callCthulhu(a:int):callingType
     begin
-        a:=6+6+6;
+        a:=1;
+        repeat
+            a:=2;
+            while a > b do
+            begin
+                a:=7;
+            end;
+        until a > c;
+        a:=8;
+        a:=a+6;
+        if a>10 then a:=a*2;
+        else a:=a*3;
+        if x<10 then x:=x*2;
+        else x:=x*777;
+        y:=7;
     end;
