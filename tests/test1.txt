@@ -1,17 +1,26 @@
-method callCthulhu(a:int):callingType
+method callCthulhu(a:int):callingType    
     begin
-        a:=1;
-        repeat
-            a:=2;
+        a:=1;        
             repeat
-                a:=3;
-             until a > c;       
-        until a > c;
-        a:=8;
+            a:=2;            
+                repeat
+                a:=3;                    
+                while a>10 do
+                    begin                        
+                    a:=4;
+                    a:=2+3;                        
+                    a:=5;
+                end;            
+            until a > b;
+        a:=7;        
+        while a > c;
+        a:=8;        
         a:=a+6;
-        if a>10 then a:=a*2;
+        if a>10 then 
+        a:=a*2;        
         else a:=a*3;
-        if x<10 then x:=x*2;
+        if x<10 then 
+        x:=x*2;        
         else x:=x*777;
         y:=7;
-    end;
+end;
