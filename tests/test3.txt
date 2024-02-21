@@ -11,9 +11,9 @@ method callCthulhu(a:int):callingType
                         a:=2+3;
                         a:=5;
                     end;
-            while a > b;    
+            until a > b;    
         a:=7;
-        while a > c;
+        until a > c;
         a:=8;
         a:=a+6;
         if a>10 then a:=a*2;

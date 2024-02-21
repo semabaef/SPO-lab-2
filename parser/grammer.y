@@ -36,6 +36,7 @@
 %type <node> source
 %type <node> body_var
 %type <node> body_item
+%type <node> body_list_var
 %type <node> source_item
 %type <node> list_var
 %type <node> list_statements
@@ -80,9 +81,11 @@ source_item: METHOD function_signature body {$$ = make_common_node("source_item"
     ;
 
 body: block                 {$$ = make_common_node("body", $1, NULL)}
-    | VAR block             {$$ = make_common_node("body", $2, NULL)}
-    | VAR body_var block    {$$ = make_common_node("body", $3, $2)}
+    | VAR body_list_var block   {$$ = make_common_node("body", $2, $3)}
     ;
+
+body_list_var: { $$ = NULL; }
+	| body_list_var body_item {$$ = make_common_node("body_list_var", $1, $2)};
 
 body_var:                   {$$ = NULL}
     | body_var body_item    {$$ = make_common_node("body_var", $1, $2)}
